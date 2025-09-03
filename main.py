@@ -6,6 +6,8 @@ app = FastAPI()
 async def ping():
     return "pong"
 
+
+
 @app.get("/health")
 async def health():
     return {message: "OK"}
