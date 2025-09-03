@@ -1,20 +1,18 @@
 openapi: 3.0.0
-title: STD24050
-version: 1.0.0
-description: "This is a specification of STD24050"
-servers:
-  - url: http://localhost:8000
-
+info:
+  title: STD24050
+  version: 1.0.0
+  description: "This is a specifcation of STD24050"
 paths:
-  components:
-    schemas:
-      component:
-        type: object
-        properties:
-          id:
-            type: string
-          name:
-            type: string
-        required:
-          - id
-          - name
+  /components:
+    get:
+      summary: "Get components"
+      responses:
+        '200':
+          description: "A list of components"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
