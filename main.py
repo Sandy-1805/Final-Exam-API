@@ -41,7 +41,8 @@ async def get_phone(identifier: str):
             characteristics: {
                 ram_memory: int,
                 rom_memory: int
-            }}
+            }}, 404 if not found else 200
+
 
 @app.put("/phones/{identifier}")
 async def update_phone(identifier: str):
